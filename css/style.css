@@ -1,0 +1,200 @@
+/* REGOLE GENERALI */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,h6,p{margin: 0;}
+a{
+  text-decoration: none;
+  color: white;
+}
+a:hover{
+  text-decoration: none;
+  color: white;
+}
+/* SCROLLBAR */
+/* CHROME/MOZILLA */
+.scroller::-webkit-scrollbar {
+  width: 10px;
+}
+
+.scroller::-webkit-scrollbar-track {
+  width: 20px;
+  background: white;
+}
+
+.scroller::-webkit-scrollbar-thumb {
+  background: #c8c8c8;
+  border-radius: 5px;
+  border: 1px solid white;
+}
+/* FIREFOX */
+.scroll{
+  scrollbar-color: #c8c8c8 white;
+  scrollbar-width: thin;
+}
+/* FINE SCROLLBAR */
+
+/* /////////////////////// IMPOSTAZIONE HEADER ////////////////////////////// */
+.nav-bar{
+  background: black;
+  width: 200px;
+  height: calc(100vh - 80px);
+  float: left;
+}
+/* //////////////////// FINE IMPOSTAZIONE HEADER //////////////////////////// */
+
+/* /////////////////////// IMPOSTAZIONE MAIN //////////////////////////////// */
+.wrapper-main{
+  width: calc(100% - 200px);
+  height: calc(100vh - 80px);
+  background: #141922;
+  overflow-y: auto;
+  float: left;
+}
+.upgrade-fixed-top{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background: rgba(0, 0, 0, 0.2);
+}
+/* //////////////////// FINE IMPOSTAZIONE MAIN ////////////////////////////// */
+
+/* /////////////////////// IMPOSTAZIONE FOOTER ////////////////////////////// */
+/* GENERALE */
+.media-player{
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  background: #282828;
+  width: 100%;
+  height: 80px;
+  color: white;
+}
+.media-player .left,
+.media-player .right{
+  width: 180px;
+  display: flex;
+}
+
+/* LEFT */
+.media-player img{
+  width: 70px;
+  padding: 15px 8px;
+  vertical-align: middle;
+}
+.media-player .left .icone{
+  display: inline-block;
+  padding: 20px 8px 0px 10px;
+  font-size: 13px;
+  color: lightgray;
+}
+.media-player .left .icone i:hover{
+  color: white;
+}
+.media-player .info-brano{
+  display: inline-block;
+  font-size: 11px;
+  padding-top: 20px;
+}
+.media-player .info-brano .autore{
+  font-weight: bold;
+}
+.media-player .info-brano .titolo{
+  color: lightgray;
+}
+.media-player .info-brano .titolo:hover{
+  text-decoration: underline;
+  color: white;
+}
+/* RIGHT */
+.media-player .right{
+  align-items: center;
+}
+.media-player .right i{
+  margin-right: 10px;
+}
+.media-player .right .volume{
+  width: 50%;
+  height: 4px;
+  border-radius: 2px;
+  background: #5a5a5a;
+}
+.media-player .right .volume .barra-volume{
+  width: 20%;
+  height: 4px;
+  border-radius: 2px;
+  background: white;
+  position: relative;
+}
+.media-player .right .volume .barra-volume .cerchio{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: white;
+  position: absolute;
+  right: -5px;
+  bottom: -3px;
+}
+.media-player .right .volume .barra-volume:hover{
+  background: lightgreen;
+}
+
+/* CENTER */
+.media-player .center{
+  width: 50%;
+  text-align: center;
+}
+.media-player .center i{
+  margin: 20px 5px;
+}
+.media-player .center i.fa-play{
+  border: 2px solid white;
+  border-radius: 50%;
+  padding: 4px;
+  padding-left: 6px;
+  margin-top: 15px;
+}
+.media-player .center i.fa-play:hover{
+  transform: scale(1.1);
+}
+.media-player .center .riproduzione{
+  display: flex;
+  position: relative;
+  bottom: 10px;
+}
+.media-player .center .riproduzione span{
+  font-size: 10px;
+  padding: 3px;
+}
+.media-player .center .barra-riproduzione{
+  width: 100%;
+  min-width: 100px;
+  height: 4px;
+  border-radius: 2px;
+  background: #5a5a5a;
+  margin: auto;
+}
+.media-player .center .barra-sviluppo{
+  width: 60px;
+  height: 4px;
+  border-radius: 2px;
+  background: white;
+  position: relative;
+}
+.media-player .center .barra-sviluppo .cerchio{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: white;
+  position: absolute;
+  right: -5px;
+  bottom: -3px;
+}
+.media-player .center .barra-sviluppo:hover{
+  background: lightgreen;
+}
+/* //////////////////// FINE IMPOSTAZIONE FOOTER //////////////////////////// */
