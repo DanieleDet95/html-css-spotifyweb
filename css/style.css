@@ -13,6 +13,7 @@ a:hover{
   text-decoration: none;
   color: white;
 }
+
 /* SCROLLBAR */
 /* CHROME/MOZILLA */
 .scroller::-webkit-scrollbar {
@@ -35,20 +36,152 @@ a:hover{
   scrollbar-width: thin;
 }
 /* FINE SCROLLBAR */
+/* FINE REGOLE GENERALI */
 
 /* /////////////////////// IMPOSTAZIONE HEADER ////////////////////////////// */
+/* LOGO */
+.nav-bar .logo{
+  z-index: 10;
+  height: 35px;
+  margin: 15px;
+}
+.nav-bar .logo-nascosto{
+  display: none;
+  height: 20px;
+}
+
+/* NAV-BAR */
 .nav-bar{
+  position: relative;
   background: black;
   width: 200px;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 81px);
   float: left;
+}
+.nav-bar li.active{
+  border-left: 3px solid lightgreen;
+}
+.nav-bar li.active a{
+  color: white;
+}
+.nav-bar li{
+  border-left: 3px solid black;
+}
+.nav-bar a{
+  color: #717171;
+}
+.nav-bar a:hover{
+  color: white;
+}
+.nav-bar i{
+  font-size: 20px;
+  width: 35px;
+  vertical-align: sub;
+  padding: 5px 15px 5px 15px;;
+}
+.nav-bar span{
+  font-size: 15px;
+  padding-left: 10px;
+}
+.nav-bar p{
+  color: white;
+  font-weight: bold;
+  padding-left: 15px;
+}
+
+/* PLAYLIST */
+.nav-bar .fa-plus{
+  background: #a3a3a3;
+  color: black;
+  margin: 10px 0px 10px 13px;
+  padding-left: 9px;
+}
+.nav-bar a:hover .fa-plus{
+  background: white;
+}
+.nav-bar .playlist{
+  overflow-y: auto;
+  height: calc(100vh - 380px)
+}
+.nav-bar .playlist a.item{
+  display: block;
+  padding-left: 10px;
+  margin-bottom: 15px;
+}
+
+/* NAV-BAR BOTTOM */
+.header-bottom{
+  position: absolute;
+  bottom: 0;
+  background: black;
+}
+.header-bottom hr{
+  margin: 5px 0px 5px 15px;
+  width: 90%;
+  display: block;
+  height: 1px;
+  background: #a3a3a3;
+  border: none;
+}
+.header-bottom .fa-arrow-alt-circle-down{
+  font-size: 13px;
+  vertical-align: baseline;
+}
+.header-bottom .fa-user-circle{
+  font-size: 20px;
+  vertical-align: baseline;
+}
+.header-bottom .profilo span{
+  color: white;
+}
+
+/* IMPOSTAZIONE MEDIA QUERY LARGHEZZA */
+@media screen and (max-width: 600px) {
+  .nav-bar{
+    width: 50px;
+    font-size: 15px;
+  }
+  .nav-bar .logo-nascosto{
+    display: inline-block;
+    margin: 10px 15px;
+  }
+  .header-bottom .fa-arrow-alt-circle-down{
+    font-size: 15px;
+    margin-left: 3px;
+  }
+  .nav-bar i:hover{
+    color: white;
+  }
+  .nav-bar li{
+    border: none;
+  }
+  .nav-bar li.active{
+    border: none;
+  }
+  .nav-bar a,
+  .nav-bar hr,
+  .nav-bar p,
+  .nav-bar .logo,
+  .nav-bar .playlist{
+    display: none;
+  }
+}
+
+/* IMPOSTAZIONE MEDIA QUERY ALTEZZA */
+@media screen and (max-height: 245px) {
+  .height-hidden{
+    display: none;
+  }
+  .header-bottom{
+    display: none;
+  }
 }
 /* //////////////////// FINE IMPOSTAZIONE HEADER //////////////////////////// */
 
 /* /////////////////////// IMPOSTAZIONE MAIN //////////////////////////////// */
 .wrapper-main{
   width: calc(100% - 200px);
-  height: calc(100vh - 80px);
+  height: calc(100vh - 81px);
   background: #141922;
   overflow-y: auto;
   float: left;
@@ -59,6 +192,12 @@ a:hover{
   width: 100%;
   height: 60px;
   background: rgba(0, 0, 0, 0.2);
+}
+/* IMPOSTAZIONE MEDIA QUERY LARGHEZZA */
+@media screen and (max-width: 600px) {
+  .wrapper-main{
+    width: calc(100% - 50px);
+  }
 }
 /* //////////////////// FINE IMPOSTAZIONE MAIN ////////////////////////////// */
 
@@ -71,7 +210,7 @@ a:hover{
   bottom: 0;
   background: #282828;
   width: 100%;
-  height: 80px;
+  height: 81px;
   color: white;
 }
 .media-player .left,
