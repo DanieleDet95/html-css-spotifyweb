@@ -259,16 +259,25 @@ a:hover{
   text-align: center;
   color: gray;
 }
+.immagine-album{
+  position: relative;
+}
+.item-album .play{
+  position: absolute;
+  top: 29%;
+  left: 40%;
+  font-size: 24px;
+  color: white;
+}
+.immagine-album:hover .immagine-album .play{
+  display: inline-block;
+}
 .item-album img{
   width: 90%;
   margin: auto;
 }
-.item-album i.fa-play{
-  border: 2px solid white;
-  border-radius: 50%;
-  padding: 4px;
-  padding-left: 6px;
-  margin-top: 15px;
+.immagine-album:hover{
+  filter: grayscale(100%);
 }
 .item-album .titolo{
   font-size: 13px;
@@ -389,7 +398,7 @@ a:hover{
 .media-player .center i{
   margin: 20px 5px;
 }
-.media-player .center i.fa-play{
+i.fa-play{
   border: 2px solid white;
   border-radius: 50%;
   padding: 4px;
