@@ -197,7 +197,7 @@ a:hover{
   border: 1px solid white;
   border-radius: 15px;
   padding: 8px 30px;
-  margin: 12px;
+  margin: 12px 25px;
   font-weight: bold;
   float: right;
 }
@@ -255,7 +255,7 @@ a:hover{
   padding: 20px 0px 10px 20px;
 }
 .item-album {
-  flex-basis: calc(100%/6);
+  flex-basis: calc(100% / 6);
   text-align: center;
   color: gray;
 }
@@ -276,8 +276,21 @@ a:hover{
   width: 90%;
   margin: auto;
 }
-.immagine-album:hover{
-  filter: grayscale(100%);
+.layover{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 5%;
+  width: 90%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+.item-album:hover .layover{
+  display: block;
+}
+.rotondo img,
+.rotondo .layover{
+  border-radius: 50%;
 }
 .item-album .titolo{
   font-size: 13px;
@@ -378,6 +391,7 @@ a:hover{
   position: relative;
 }
 .media-player .right .volume .barra-volume .cerchio{
+  display: none;
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -385,6 +399,9 @@ a:hover{
   position: absolute;
   right: -5px;
   bottom: -3px;
+}
+.media-player .right .volume .barra-volume:hover .cerchio{
+  display: block;
 }
 .media-player .right .volume .barra-volume:hover{
   background: #adff2f;
@@ -433,6 +450,7 @@ i.fa-play{
   position: relative;
 }
 .media-player .center .barra-sviluppo .cerchio{
+  display: none;
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -440,6 +458,9 @@ i.fa-play{
   position: absolute;
   right: -5px;
   bottom: -3px;
+}
+.media-player .center .barra-sviluppo:hover .cerchio{
+  display: block;
 }
 .media-player .center .barra-sviluppo:hover{
   background: #adff2f;
