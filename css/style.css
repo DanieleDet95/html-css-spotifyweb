@@ -401,10 +401,10 @@ a:hover{
   right: -5px;
   bottom: -3px;
 }
-.media-player .right .volume .barra-volume:hover .cerchio{
+.media-player .right .volume:hover .cerchio{
   display: block;
 }
-.media-player .right .volume .barra-volume:hover{
+.media-player .right .volume:hover .barra-volume{
   background: #adff2f;
 }
 
@@ -460,10 +460,10 @@ i.fa-play{
   right: -5px;
   bottom: -3px;
 }
-.media-player .center .barra-sviluppo:hover .cerchio{
+.media-player .center .barra-riproduzione:hover .cerchio{
   display: block;
 }
-.media-player .center .barra-sviluppo:hover{
+.media-player .center .barra-riproduzione:hover .barra-sviluppo{
   background: #adff2f;
 }
 /* //////////////////// FINE IMPOSTAZIONE FOOTER //////////////////////////// */
